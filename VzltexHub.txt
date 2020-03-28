@@ -81,12 +81,13 @@ GameName.TextWrapped = true
 
 --Game:
 
---MadCity
-if game.PlaceId == 1224212277 then
+--NinjaLegends
+if game.PlaceId == 3956818381 then
 	Start.MouseButton1Down:connect(function()
 print('Started!')
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/NinjaLegends.txt'),true))()
 end)
-GameName.Text = "Mad City"
+GameName.Text = "Ninja Legends"
 
 --PrisonLife
 elseif game.PlaceId == 155615604 then
