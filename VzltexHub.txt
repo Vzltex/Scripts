@@ -92,23 +92,16 @@ GameName.Text = "Mad City"
 elseif game.PlaceId == 155615604 then
 	Start.MouseButton1Down:connect(function()
 print('Started!')
-loadstring(game:HttpGet(('https://pastebin.com/raw/pm7WvgzY'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/prisonlife.txt'),true))()
 Main.Visible = false
 end)
 GameName.Text = "Prison Life Car Fixed"
-
---EmptyBasteplate
-elseif game.PlaceId == 3362132792 then
-	Start.MouseButton1Down:connect(function()
-print('Started!')
-end)
-GameName.Text = "Empty Basteplate"
 
 --Fleethefacility
 elseif game.PlaceId == 893973440 then
 	Start.MouseButton1Down:connect(function()
 print('Started!')
-loadstring(game:HttpGet(('https://pastebin.com/raw/pdb8SHqj'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/FleetheFacility.txt'),true))()
 Main.Visible = false
 end)
 GameName.Text = "Flee the facility"
@@ -117,7 +110,7 @@ GameName.Text = "Flee the facility"
 elseif game.PlaceId == 286090429 then
 	Start.MouseButton1Down:connect(function()
 print('Started!')
-loadstring(game:HttpGet(('https://pastebin.com/raw/A4m9X73p'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/Arsenal.txt'),true))()
 Main.Visible = false
 end)
 GameName.Text = "Arsenal"
@@ -125,7 +118,7 @@ GameName.Text = "Arsenal"
 else
 	Start.MouseButton1Down:connect(function()
 print('Started!')
-loadstring(game:HttpGet(('https://pastebin.com/raw/HX0u251J'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/Universal.txt'),true))()
 Main.Visible = false
 end)
 GameName.Text = "Universal Aimbot ESP"
