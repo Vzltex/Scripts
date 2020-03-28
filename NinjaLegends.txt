@@ -39,6 +39,7 @@ Main.Active = true
 Main.BackgroundColor3 = Color3.fromRGB(20, 22, 24)
 Main.Position = UDim2.new(0.0361990966, 0, 0.043230962, 0)
 Main.Size = UDim2.new(0, 373, 0, 353)
+Main.Draggable = true
 
 Frame.Parent = Main
 Frame.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
