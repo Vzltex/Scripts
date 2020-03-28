@@ -86,6 +86,7 @@ if game.PlaceId == 3956818381 then
 	Start.MouseButton1Down:connect(function()
 print('Started!')
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/NinjaLegends.txt'),true))()
+Main.Visible = false
 end)
 GameName.Text = "Ninja Legends"
 
