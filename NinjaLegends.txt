@@ -1,0 +1,468 @@
+-- Instances:
+
+local VzltexPrisonUniversal = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Minimize = Instance.new("ImageButton")
+local LabelVzltex = Instance.new("TextLabel")
+local Main_2 = Instance.new("Frame")
+local Autoswingcheck = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Autosellcheck = Instance.new("TextButton")
+local Farmbosscheck = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local FarmPlayerCheck = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
+local AutoUpgradeSwordCheck = Instance.new("TextButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local AutoUpgradeBeltCheck = Instance.new("TextButton")
+local TextLabel_7 = Instance.new("TextLabel")
+local AutoUpgradeSkillCheck = Instance.new("TextButton")
+local TextLabel_8 = Instance.new("TextLabel")
+local TpHoopCheck = Instance.new("TextButton")
+local TextLabel_9 = Instance.new("TextLabel")
+local TptoCoincheck = Instance.new("TextButton")
+local TextLabel_10 = Instance.new("TextLabel")
+local Tpallislandcheck = Instance.new("TextButton")
+local TextLabel_11 = Instance.new("TextLabel")
+
+--Properties:
+
+VzltexPrisonUniversal.Name = "Vzltex Prison Universal"
+VzltexPrisonUniversal.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = VzltexPrisonUniversal
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(20, 22, 24)
+Main.Position = UDim2.new(0.0361990966, 0, 0.043230962, 0)
+Main.Size = UDim2.new(0, 373, 0, 353)
+
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 373, 0, 16)
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Frame
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.0160857905, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 14, 0, 17)
+Minimize.Image = "http://www.roblox.com/asset/?id=4824770438"
+Minimize.MouseButton1Down:connect(function()
+    print('Closed!')
+    Main.Visible = false
+end)
+
+LabelVzltex.Name = "LabelVzltex"
+LabelVzltex.Parent = Frame
+LabelVzltex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LabelVzltex.BackgroundTransparency = 1.000
+LabelVzltex.Position = UDim2.new(0.0831099153, 0, 0, 0)
+LabelVzltex.Size = UDim2.new(0, 67, 0, 17)
+LabelVzltex.Font = Enum.Font.GothamSemibold
+LabelVzltex.Text = "Vzltex-Hub"
+LabelVzltex.TextColor3 = Color3.fromRGB(255, 255, 255)
+LabelVzltex.TextScaled = true
+LabelVzltex.TextSize = 14.000
+LabelVzltex.TextWrapped = true
+
+Main_2.Name = "Main"
+Main_2.Parent = Main
+Main_2.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
+Main_2.BorderSizePixel = 0
+Main_2.Position = UDim2.new(0, 0, 0.0481586419, 0)
+Main_2.Size = UDim2.new(0, 373, 0, 336)
+
+Autoswingcheck.Name = "Autoswingcheck"
+Autoswingcheck.Parent = Main_2
+Autoswingcheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Autoswingcheck.Position = UDim2.new(0.0536192618, 0, 0.113853991, 0)
+Autoswingcheck.Size = UDim2.new(0, 18, 0, 18)
+Autoswingcheck.Font = Enum.Font.GothamSemibold
+Autoswingcheck.Text = ""
+Autoswingcheck.TextColor3 = Color3.fromRGB(38, 74, 121)
+Autoswingcheck.TextSize = 14.000
+Autoswingcheck.TextWrapped = true
+Autoswingcheck.MouseButton1Down:connect(function()
+    if Autoswingcheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+        Autoswingcheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        _G.swing = true
+        while _G.swing do
+        wait()
+        game.Players.LocalPlayer.ninjaEvent:FireServer("swingKatana")
+        end
+    elseif Autoswingcheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+        Autoswingcheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+        _G.swing = false
+    end
+    end)
+
+TextLabel.Parent = Main_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.00536192954, 0, 0.0238095243, 0)
+TextLabel.Size = UDim2.new(0, 53, 0, 27)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Stuff:"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+
+Autosellcheck.Name = "Autosellcheck"
+Autosellcheck.Parent = Main_2
+Autosellcheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Autosellcheck.Position = UDim2.new(0.0536193028, 0, 0.199568391, 0)
+Autosellcheck.Size = UDim2.new(0, 18, 0, 18)
+Autosellcheck.Font = Enum.Font.GothamSemibold
+Autosellcheck.Text = ""
+Autosellcheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+Autosellcheck.TextSize = 14.000
+Autosellcheck.TextWrapped = true
+Autosellcheck.MouseButton1Down:connect(function()
+    if Autosellcheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+        Autosellcheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        _G.sell = true
+while _G.sell do
+wait()
+game.workspace["sellAreaCircles"].sellAreaCircle.circleFakeInner.CFrame = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame
+game.workspace["sellAreaCircles"].sellAreaCircle.circleInner.CFrame = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame
+end
+    elseif Autosellcheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+        Autosellcheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+        _G.sell = false
+    end
+    end)
+
+Farmbosscheck.Name = "Farmbosscheck"
+Farmbosscheck.Parent = Main_2
+Farmbosscheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Farmbosscheck.Position = UDim2.new(0.0536193028, 0, 0.282108068, 0)
+Farmbosscheck.Size = UDim2.new(0, 18, 0, 18)
+Farmbosscheck.Font = Enum.Font.GothamSemibold
+Farmbosscheck.Text = ""
+Farmbosscheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+Farmbosscheck.TextSize = 14.000
+Farmbosscheck.TextWrapped = true
+Farmbosscheck.MouseButton1Down:connect(function()
+    if Farmbosscheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+        Farmbosscheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        _G.boss = true
+while _G.boss do
+wait()
+
+if game:GetService("Workspace").bossFolder:FindFirstChild("RobotBoss"):FindFirstChild("HumanoidRootPart") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.bossFolder.RobotBoss.HumanoidRootPart.CFrame
+            end
+end
+    elseif Farmbosscheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+        Farmbosscheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+        __G.boss = false
+    end
+    end)
+
+TextLabel_2.Parent = Main_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.117962465, 0, 0.271909744, 0)
+TextLabel_2.Size = UDim2.new(0, 60, 0, 23)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Farm Boss"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 16.000
+
+TextLabel_3.Parent = Main_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.117962465, 0, 0.188731521, 0)
+TextLabel_3.Size = UDim2.new(0, 60, 0, 23)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Auto Sell"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 16.000
+
+TextLabel_4.Parent = Main_2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.11796248, 0, 0.105895035, 0)
+TextLabel_4.Size = UDim2.new(0, 70, 0, 23)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Auto Swing"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 16.000
+
+FarmPlayerCheck.Name = "FarmPlayerCheck"
+FarmPlayerCheck.Parent = Main_2
+FarmPlayerCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+FarmPlayerCheck.Position = UDim2.new(0.0536193028, 0, 0.367822349, 0)
+FarmPlayerCheck.Size = UDim2.new(0, 18, 0, 18)
+FarmPlayerCheck.Font = Enum.Font.GothamSemibold
+FarmPlayerCheck.Text = ""
+FarmPlayerCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+FarmPlayerCheck.TextSize = 14.000
+FarmPlayerCheck.TextWrapped = true
+FarmPlayerCheck.MouseButton1Down:connect(function()
+    if FarmPlayerCheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+        FarmPlayerCheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        _G.heads = true
+while _G.heads do
+wait(0.1)
+
+        local pos = 5, 0, 5
+        local player = game.Players:GetChildren()
+        for i = 1, #player do
+            if player[i].Name ~= game.Players.LocalPlayer.Name then
+                local part = player[i].Character.Head
+                part.Transparency = 0
+                part.Material = "Neon"
+                part.CanCollide = false
+                part.Anchored = true
+                part.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(pos)
+            end
+        end
+end
+    elseif FarmPlayerCheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+        FarmPlayerCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+        _G.heads = true
+    end
+    end)
+
+TextLabel_5.Parent = Main_2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.117962465, 0, 0.357624024, 0)
+TextLabel_5.Size = UDim2.new(0, 70, 0, 23)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Farm Player"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 16.000
+
+AutoUpgradeSwordCheck.Name = "AutoUpgradeSwordCheck"
+AutoUpgradeSwordCheck.Parent = Main_2
+AutoUpgradeSwordCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+AutoUpgradeSwordCheck.Position = UDim2.new(0.0536193028, 0, 0.450362027, 0)
+AutoUpgradeSwordCheck.Size = UDim2.new(0, 18, 0, 18)
+AutoUpgradeSwordCheck.Font = Enum.Font.GothamSemibold
+AutoUpgradeSwordCheck.Text = ""
+AutoUpgradeSwordCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoUpgradeSwordCheck.TextSize = 14.000
+AutoUpgradeSwordCheck.TextWrapped = true
+AutoUpgradeSwordCheck.MouseButton1Down:connect(function()
+    if AutoUpgradeSwordCheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+        AutoUpgradeSwordCheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        _G.sword = true
+        while _G.sword do
+        wait()
+        local oh1 = "buyAllSwords"
+        local oh2 = {"Ground", "Astral Island", "Space Island"}
+        for i = 1, #oh2 do
+            game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+        end
+        end
+    elseif AutoUpgradeSwordCheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+        AutoUpgradeSwordCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+        _G.sword = false
+    end
+    end)
+
+TextLabel_6.Parent = Main_2
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0.117962465, 0, 0.440163702, 0)
+TextLabel_6.Size = UDim2.new(0, 122, 0, 23)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Auto Upgrade Sword"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 16.000
+
+AutoUpgradeBeltCheck.Name = "AutoUpgradeBeltCheck"
+AutoUpgradeBeltCheck.Parent = Main_2
+AutoUpgradeBeltCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+AutoUpgradeBeltCheck.Position = UDim2.new(0.0536193028, 0, 0.532901704, 0)
+AutoUpgradeBeltCheck.Size = UDim2.new(0, 18, 0, 18)
+AutoUpgradeBeltCheck.Font = Enum.Font.GothamSemibold
+AutoUpgradeBeltCheck.Text = ""
+AutoUpgradeBeltCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoUpgradeBeltCheck.TextSize = 14.000
+AutoUpgradeBeltCheck.TextWrapped = true
+AutoUpgradeBeltCheck.MouseButton1Down:connect(function()
+    if AutoUpgradeBeltCheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+        AutoUpgradeBeltCheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        _G.belt = true
+while _G.belt do
+wait()
+local oh1 = "buyAllBelts"
+local oh2 = {"Ground", "Astral Island", "Space Island"}
+for i = 1, #oh2 do
+    game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+end
+end
+    elseif AutoUpgradeBeltCheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+        AutoUpgradeBeltCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+        _G.belt = false
+    end
+    end)
+
+TextLabel_7.Parent = Main_2
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.101876676, 0, 0.522703409, 0)
+TextLabel_7.Size = UDim2.new(0, 119, 0, 23)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Auto Upgrade Belt"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 16.000
+
+AutoUpgradeSkillCheck.Name = "AutoUpgradeSkillCheck"
+AutoUpgradeSkillCheck.Parent = Main_2
+AutoUpgradeSkillCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+AutoUpgradeSkillCheck.Position = UDim2.new(0.0536193028, 0, 0.618615985, 0)
+AutoUpgradeSkillCheck.Size = UDim2.new(0, 18, 0, 18)
+AutoUpgradeSkillCheck.Font = Enum.Font.GothamSemibold
+AutoUpgradeSkillCheck.Text = ""
+AutoUpgradeSkillCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoUpgradeSkillCheck.TextSize = 14.000
+AutoUpgradeSkillCheck.TextWrapped = true
+AutoUpgradeSkillCheck.MouseButton1Down:connect(function()
+    if AutoUpgradeSkillCheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+        AutoUpgradeSkillCheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        _G.skill = true
+while _G.skill do
+wait()
+local oh1 = "buyAllSkills"
+local oh2 = {"Ground", "Astral Island", "Space Island"}
+for i = 1, #oh2 do
+    game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+end
+end
+    elseif AutoUpgradeSkillCheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+        AutoUpgradeSkillCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+        _G.skill = false
+    end
+    end)
+
+TextLabel_8.Parent = Main_2
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0.101876676, 0, 0.60841769, 0)
+TextLabel_8.Size = UDim2.new(0, 119, 0, 23)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Auto Upgrade Skill"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 16.000
+
+TpHoopCheck.Name = "TpHoopCheck"
+TpHoopCheck.Parent = Main_2
+TpHoopCheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+TpHoopCheck.Position = UDim2.new(0.050938338, 0, 0.701155663, 0)
+TpHoopCheck.Size = UDim2.new(0, 18, 0, 18)
+TpHoopCheck.Font = Enum.Font.GothamSemibold
+TpHoopCheck.Text = ""
+TpHoopCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpHoopCheck.TextSize = 14.000
+TpHoopCheck.TextWrapped = true
+
+TextLabel_9.Parent = Main_2
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.101876676, 0, 0.690957427, 0)
+TextLabel_9.Size = UDim2.new(0, 109, 0, 23)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "(Broken)"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 12.000
+
+TptoCoincheck.Name = "TptoCoincheck"
+TptoCoincheck.Parent = Main_2
+TptoCoincheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+TptoCoincheck.Position = UDim2.new(0.050938338, 0, 0.786869943, 0)
+TptoCoincheck.Size = UDim2.new(0, 18, 0, 18)
+TptoCoincheck.Font = Enum.Font.GothamSemibold
+TptoCoincheck.Text = ""
+TptoCoincheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+TptoCoincheck.TextSize = 14.000
+TptoCoincheck.TextWrapped = true
+TptoCoincheck.MouseButton1Down:connect(function()
+if TptoCoincheck.BackgroundColor3 == Color3.fromRGB(38, 74, 121) then
+    TptoCoincheck.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+    _G.TpToCoins = true
+while _G.TpToCoins do
+    wait(0.1)
+    for i, v in pairs(game.Workspace.spawnedCoins.Valley:GetChildren()) do
+    wait(0.1)
+        if  _G.TpToCoins then
+           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        end
+    end
+end
+elseif TptoCoincheck.BackgroundColor3 == Color3.fromRGB(255, 255, 0) then
+    TptoCoincheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+    _G.TpToCoins = false
+end
+end)
+
+TextLabel_10.Parent = Main_2
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0.101876676, 0, 0.776671708, 0)
+TextLabel_10.Size = UDim2.new(0, 109, 0, 23)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "Teleport to Coins"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 16.000
+
+Tpallislandcheck.Name = "Tpallislandcheck"
+Tpallislandcheck.Parent = Main_2
+Tpallislandcheck.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Tpallislandcheck.Position = UDim2.new(0.050938338, 0, 0.869409621, 0)
+Tpallislandcheck.Size = UDim2.new(0, 18, 0, 18)
+Tpallislandcheck.Font = Enum.Font.GothamSemibold
+Tpallislandcheck.Text = ""
+Tpallislandcheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tpallislandcheck.TextSize = 14.000
+Tpallislandcheck.TextWrapped = true
+Tpallislandcheck.MouseButton1Down:connect(function()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local islandPart = game.Workspace.islandUnlockParts
+local islands = { 
+[1] = islandPart["Enchanted Island"],
+[2] = islandPart["Astral Island"],
+[3] = islandPart['Mystical Island'],
+[4] = islandPart['Space Island'],
+[5] = islandPart['Tundra Island'],
+[6] = islandPart['Eternal Island'],
+[7] = islandPart['Sandstorm'],
+[8] = islandPart['Thunderstorm'],
+[9] = islandPart['Ancient Inferno Island']
+}
+--Scripts--
+pl.CFrame = islands[1].CFrame
+wait(0.2)
+pl.CFrame = islands[2].CFrame
+wait(0.2)
+pl.CFrame = islands[3].CFrame 
+wait(0.2)
+pl.CFrame = islands[4].CFrame
+wait(0.2)
+pl.CFrame = islands[5].CFrame
+wait(0.2)
+pl.CFrame = islands[6].CFrame
+wait(0.2)
+pl.CFrame = islands[7].CFrame
+wait(0.2)
+pl.CFrame = islands[8].CFrame
+wait(0.2)
+pl.CFrame = islands[9].CFrame
+end)
+
+TextLabel_11.Parent = Main_2
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(0.0991957113, 0, 0.859211385, 0)
+TextLabel_11.Size = UDim2.new(0, 141, 0, 23)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "Teleport to All Islands"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextSize = 16.000
