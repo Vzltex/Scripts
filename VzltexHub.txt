@@ -116,7 +116,7 @@ end)
 GameName.Text = "Arsenal"
 
 else
-	Start.MouseButton1Down:connect(function()
+    Start.MouseButton1Down:connect(function()
 print('Started!')
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/Universal.txt'),true))()
 Main.Visible = false
