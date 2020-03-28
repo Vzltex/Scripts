@@ -1,0 +1,200 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local VzltexPrisonUniversal = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Minimize = Instance.new("ImageButton")
+local LabelVzltex = Instance.new("TextLabel")
+local Main_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Aimbot = Instance.new("TextButton")
+local Bigtorso = Instance.new("TextButton")
+local Mainbutton = Instance.new("TextButton")
+local VisualButton = Instance.new("TextButton")
+local Visual = Instance.new("Frame")
+local ESP = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+VzltexPrisonUniversal.Name = "Vzltex Prison Universal"
+VzltexPrisonUniversal.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = VzltexPrisonUniversal
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(20, 22, 24)
+Main.Position = UDim2.new(0.0361990966, 0, 0.043230962, 0)
+Main.Size = UDim2.new(0, 373, 0, 353)
+Main.Draggable = true
+
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 373, 0, 16)
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Frame
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.0160857905, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 14, 0, 17)
+Minimize.Image = "http://www.roblox.com/asset/?id=4824770438"
+Minimize.MouseButton1Down:connect(function()
+print('Closed!')
+Main.Visible = false
+end)
+
+LabelVzltex.Name = "LabelVzltex"
+LabelVzltex.Parent = Frame
+LabelVzltex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LabelVzltex.BackgroundTransparency = 1.000
+LabelVzltex.Position = UDim2.new(0.0831099153, 0, 0, 0)
+LabelVzltex.Size = UDim2.new(0, 67, 0, 17)
+LabelVzltex.Font = Enum.Font.GothamSemibold
+LabelVzltex.Text = "Vzltex-Hub"
+LabelVzltex.TextColor3 = Color3.fromRGB(255, 255, 255)
+LabelVzltex.TextScaled = true
+LabelVzltex.TextSize = 14.000
+LabelVzltex.TextWrapped = true
+
+Main_2.Name = "Main"
+Main_2.Parent = Main
+Main_2.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
+Main_2.BorderSizePixel = 0
+Main_2.Position = UDim2.new(0, 0, 0.107648723, 0)
+Main_2.Size = UDim2.new(0, 373, 0, 315)
+
+TextLabel.Parent = Main_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0241286866, 0, 0.0253968257, 0)
+TextLabel.Size = UDim2.new(0, 46, 0, 27)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Stuff:"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = Main_2
+Aimbot.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Aimbot.Position = UDim2.new(0.0375335105, 0, 0.132901579, 0)
+Aimbot.Size = UDim2.new(0, 143, 0, 29)
+Aimbot.Font = Enum.Font.GothamSemibold
+Aimbot.Text = "Aimbot Ctrl"
+Aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+Aimbot.TextSize = 14.000
+Aimbot.TextWrapped = true
+Aimbot.MouseButton1Down:connect(function()
+print('Aimbot Gui Enabled!')
+loadstring(game:HttpGet(('https://pastebin.com/raw/6QMiaMew'),true))()
+end)
+
+Bigtorso.Name = "Bigtorso"
+Bigtorso.Parent = Main_2
+Bigtorso.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+Bigtorso.Position = UDim2.new(0.0375335105, 0, 0.256711125, 0)
+Bigtorso.Size = UDim2.new(0, 143, 0, 29)
+Bigtorso.Font = Enum.Font.GothamSemibold
+Bigtorso.Text = "Big Torso"
+Bigtorso.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bigtorso.TextSize = 14.000
+Bigtorso.TextWrapped = true
+Bigtorso.MouseButton1Down:connect(function()
+print("a")
+function getplrsname()
+for i,v in pairs(game:GetChildren()) do
+if v.ClassName == "Players" then
+return v.Name
+end
+end
+end
+local players = getplrsname()
+local plr = game[players].LocalPlayer
+coroutine.resume(coroutine.create(function()
+while  wait(1) do
+coroutine.resume(coroutine.create(function()
+for _,v in pairs(game[players]:GetPlayers()) do
+if v.Name ~= plr.Name and v.Character then
+v.Character.LowerTorso.CanCollide = false
+v.Character.LowerTorso.Material = "Neon"
+v.Character.LowerTorso.Size = Vector3.new(30,30,30)
+v.Character.HumanoidRootPart.Size = Vector3.new(30,30,30)
+end
+end
+end))
+end
+end))
+end)
+
+Mainbutton.Name = "Mainbutton"
+Mainbutton.Parent = Main
+Mainbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mainbutton.BackgroundTransparency = 1.000
+Mainbutton.BorderSizePixel = 0
+Mainbutton.Position = UDim2.new(0, 0, 0.0473011211, 0)
+Mainbutton.Size = UDim2.new(0, 98, 0, 22)
+Mainbutton.Font = Enum.Font.SourceSans
+Mainbutton.Text = "Main"
+Mainbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mainbutton.TextScaled = true
+Mainbutton.TextSize = 14.000
+Mainbutton.TextWrapped = true
+Mainbutton.MouseButton1Down:connect(function()
+Visual.Visible = false
+Main_2.Visible = true
+end)
+
+VisualButton.Name = "VisualButton"
+VisualButton.Parent = Main
+VisualButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VisualButton.BackgroundTransparency = 1.000
+VisualButton.BorderSizePixel = 0
+VisualButton.Position = UDim2.new(0.262734592, 0, 0.0444682613, 0)
+VisualButton.Size = UDim2.new(0, 98, 0, 22)
+VisualButton.Font = Enum.Font.SourceSans
+VisualButton.Text = "Visual"
+VisualButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+VisualButton.TextScaled = true
+VisualButton.TextSize = 14.000
+VisualButton.TextWrapped = true
+VisualButton.MouseButton1Down:connect(function()
+Visual.Visible = true
+Main_2.Visible = false
+end)
+
+Visual.Name = "Visual"
+Visual.Parent = Main
+Visual.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
+Visual.BorderSizePixel = 0
+Visual.Position = UDim2.new(0, 0, 0.109124765, 0)
+Visual.Size = UDim2.new(0, 372, 0, 314)
+Visual.Visible = false
+
+ESP.Name = "ESP"
+ESP.Parent = Visual
+ESP.BackgroundColor3 = Color3.fromRGB(38, 74, 121)
+ESP.Position = UDim2.new(0.0369838178, 0, 0.110085942, 0)
+ESP.Size = UDim2.new(0, 111, 0, 30)
+ESP.Font = Enum.Font.GothamSemibold
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextSize = 14.000
+ESP.TextWrapped = true
+ESP.MouseButton1Down:connect(function()
+print('ESP ENABLED!')
+loadstring(game:HttpGet(('https://pastebin.com/raw/A84cMe8w'),true))()
+end)
+
+TextLabel_2.Parent = Visual
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, -0.000727936625, 0)
+TextLabel_2.Size = UDim2.new(0, 111, 0, 27)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Vzltex ESP"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 18.000
