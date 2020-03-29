@@ -128,7 +128,7 @@ abuse:AddButton("Kill Aura", function()
 end)
 
 abuse:AddButton("Kill All", function()
-  fworkspace.Remote.TeamEvent:FireServer("Medium stone grey")
+  workspace.Remote.TeamEvent:FireServer("Medium stone grey")
  
 game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
  
