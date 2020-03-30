@@ -1,6 +1,6 @@
 --Prison Life Wally Hub
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/VzltexArch/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
 local main = library:CreateWindow({text = "Vzltex Hub"})
 local functions = library:CreateWindow({text = "Functions"})
 local visual = library:CreateWindow({text = "Visual"})
