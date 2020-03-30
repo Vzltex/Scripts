@@ -41,7 +41,6 @@ main:AddButton("Teleport To Computer", function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pc.BasePart.Position.X, pc.BasePart.Position.Y + 6, pc.BasePart.Position.Z)
         end
     end
-  end
 end)
 
 main:AddButton("Teleport To Exit", function()
