@@ -19,7 +19,7 @@ main:AddButton("Print Murderer Sheriff", function()
             Text = (tostring(i) .. ": " .. tostring(x)),
             Duration = 5,
             Button1 = "Dismiss",
-            })
+        })
         elseif x == "Sheriff" then
         print(tostring(i) .. ": " .. tostring(x))
         game:GetService("StarterGui"):SetCore("SendNotification",{
@@ -27,7 +27,7 @@ main:AddButton("Print Murderer Sheriff", function()
             Text = (tostring(i) .. ": " .. tostring(x)),
             Duration = 5,
             Button1 = "Dismiss",
-            })
+        })
         end
         end
         end
