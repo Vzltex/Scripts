@@ -28,31 +28,29 @@ main:AddToggle("Wall Check", function(wallcheckstate)
     _G.WRDAimBotWallcheck = (wallcheckstate and true or false)  
 end)
 
-visual:AddButton("Big Torso Hit Box", function()
-    print("a")
- function getplrsname()
- for i,v in pairs(game:GetChildren()) do
- if v.ClassName == "Players" then
- return v.Name
- end
- end
- end
- local players = getplrsname()
+visual:AddToggle("Big Torso", function(bigtorsostate)
+ usingHitbox = (bigtorsostate and true or false)  
+    local players = getplrsname()
  local plr = game[players].LocalPlayer
  coroutine.resume(coroutine.create(function()
- while  wait(1) do
+ while  wait(1)  do
  coroutine.resume(coroutine.create(function()
  for _,v in pairs(game[players]:GetPlayers()) do
  if v.Name ~= plr.Name and v.Character then
+    if usingHitbox then
  v.Character.LowerTorso.CanCollide = false
  v.Character.LowerTorso.Material = "Neon"
- v.Character.LowerTorso.Size = Vector3.new(30,30,30)
- v.Character.HumanoidRootPart.Size = Vector3.new(30,30,30)
+ v.Character.LowerTorso.Size = Vector3.new(20,20,20) -- Change 30,30,30 to the size you want
+ v.Character.HumanoidRootPart.Size = Vector3.new(20,20,20) -- Change 30,30,30 to the size you want
+                    else
+    v.Character.LowerTorso.Size = Vector3.new(2, 0.4, 1) -- Change 30,30,30 to the size you want
+ v.Character.HumanoidRootPart.Size = Vector3.new(1, 2, 1)
+ end
  end
  end
  end))
  end
- end))
+ end)) 
 end)
 
 visual:AddButton("ESP", function()
