@@ -1,0 +1,33 @@
+--Arsenal Wally Hub
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
+local main = library:CreateWindow({text = "Vzltex Hub"})
+local visual = library:CreateWindow({text = "Visual"})
+local credits = library:CreateWindow({text='Credits'})
+credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub")
+
+_G.WRDAimbotTeamCheck = false
+_G.WRDAimbotBypass = false
+_G.WRDAimBotWallcheck = false
+
+main:AddButton("Spawn 20 Gear", function()
+    for i = 1,10 do 
+    game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+end
+end)
+
+main:AddBox("WalkSpeed", function(object, focus)
+  if focus then
+      game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(object.Text) or 16
+  end
+end)
+
+main:AddBox("JumpPower", function(object1, focus1)
+  if focus1 then
+      game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = tonumber(object1.Text) or 50
+  end
+end)
+
+visual:AddButton("ESP", function()
+    spawn(loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true)))()
+end)
