@@ -6,7 +6,7 @@ local credits = library:CreateWindow({text='Credits'})
 credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub")
 
 main:AddButton("Player ESP", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Scripts/master/ESP.txt", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VzltexArch/Scripts/master/ESP.txt", true))()
 end)
 
 main:AddButton("Print Murderer Sheriff", function()
