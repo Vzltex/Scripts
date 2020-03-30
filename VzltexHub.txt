@@ -25,11 +25,11 @@ elseif game.PlaceId == 286090429 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/Arsenal.txt'),true))()
     end)
-elseif game.PlaceId == 301549746 then
-    main:AddLabel("Counter Blox");
+elseif game.PlaceId == 142823291 then
+    main:AddLabel("Murder Mystery 2");
     main:AddButton("Start", function()
         game.CoreGui['UILibrary']:Destroy()
-        loadstring(game:HttpGet((''),true))()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/themessx/Scripts/master/mm2.txt'),true))()
     end)
 elseif game.PlaceId == 662417684 then
     main:AddLabel("Lucky Blox Battle Ground");
