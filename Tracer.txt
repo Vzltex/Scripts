@@ -1,0 +1,106 @@
+model = game.Players:GetChildren()
+
+mouse = game.Players.LocalPlayer:GetMouse()
+
+
+function tracer()
+
+for i,v in pairs(model) do
+ planame = v.Name
+Bp = game.Workspace[planame]
+local brick = Instance.new("Part",workspace)
+brick.Anchored = true
+brick.CanCollide = false
+brick.Transparency = 1
+brick.BrickColor = v.TeamColor
+brick.Name = "TESTTEST"
+--[[
+       local box = Instance.new("BoxHandleAdornment", Bp.HumanoidRootPart)
+								box.Size = Bp.UpperTorso.Size
+								box.Adornee = Bp.UpperTorso
+								box.ZIndex = 5
+								box.AlwaysOnTop = true
+								box.Color3 = Color3.fromRGB(255, 0, 25)
+--]]
+r = brick.Color.R
+g = brick.Color.G
+b = brick.Color.B
+
+
+
+if Bp.Name ~= game.Players.LocalPlayer.Name then
+ local box = Instance.new("BoxHandleAdornment", Bp.HumanoidRootPart)
+								box.Size = Bp.HumanoidRootPart.Size
+								box.Adornee = Bp.HumanoidRootPart
+								box.ZIndex = 5
+								box.AlwaysOnTop = true
+								box.Color3 = Color3.new(r,g,b)
+
+end
+
+								local at0 = Instance.new("Attachment", game.Players.LocalPlayer.Character.HumanoidRootPart)
+								local at1 = Instance.new("Attachment", Bp.HumanoidRootPart)
+								local beam = Instance.new("Beam", game.Players.LocalPlayer.Character)
+								beam.Color = ColorSequence.new(Color3.new(r,g,b),Color3.new(r,g,b))
+							--	beam.Transparency = 0.7
+						--beam.Transparency = NumberSequence(1,1)
+								beam.FaceCamera = true
+								beam.Width0 = 0.2
+								beam.Width1 = 0.2
+								beam.Attachment0 = at0
+								beam.Attachment1 = at1
+								wait()
+
+end
+
+end
+tracer()
+
+
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+	wait(game.Players.RespawnTime)
+	wait(0.5)
+	tracer()
+end)
+
+
+function PressQ(key) -- Chnage Q to whatever key you desire. Capitals matter. For Example: PressH
+    if (key == "t") then -- Change "q" to whatever letter you use in the line above. Lowercase matters. For Example: "h"
+       tracer()
+print("Tracer Updated")
+    end
+end
+   
+mouse.KeyDown:Connect(PressQ)
+
+game.Players.PlayerAdded:Connect(function()
+	tracer()
+end)
+
+game.Players.PlayerRemoving:Connect(function()
+	tracer()
+end)
+
+function waiting()
+	
+	while wait(0.1) do
+		tracer()
+	end
+end
+
+
+
+
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Tracer",
+    Text = "Press T to update the tracer!",
+    Duration = 6,
+        })
+
+
+
+
+
+waiting()
