@@ -25,6 +25,12 @@ elseif game.PlaceId == 286090429 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Arsenal.txt'),true))()
     end)
+elseif game.PlaceId == 188331334 then
+    main:AddLabel("Testing Server");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/mm2.txt'),true))()
+    end)
 elseif game.PlaceId == 142823291 then
     main:AddLabel("Murder Mystery 2");
     main:AddButton("Start", function()
