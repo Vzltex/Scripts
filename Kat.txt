@@ -17,7 +17,7 @@ main:AddButton("Aimbot Key E", function()
     _G.FREE_FOR_ALL = true
     
     _G.BIND        = 101
-    _G.ESP_BIND    = 
+    _G.ESP_BIND    = null
     _G.CHANGE_AIM  = 'q'
     
     _G.AIM_AT = 'Head'
@@ -221,7 +221,7 @@ main:AddButton("Aimbot Key E", function()
     wait()
     _G.FREE_FOR_ALL = true
     _G.BIND = 101 -- LEFT CTRL
-    _G.ESP_BIND = -- LEFT ALT
+    _G.ESP_BIND = null -- LEFT ALT
 end)
 
 visual:AddButton("Player ESP", function()
