@@ -8,7 +8,7 @@ local credits = library:CreateWindow({text='Credits'})
 
 
 if game.PlaceId == 893973440 then
-    main:AddLabel("Flee The Facility Detected");
+    main:AddLabel("Flee The Facility");
     main:AddButton("Start", function()
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/FleetheFacility.txt'),true))()
@@ -31,6 +31,12 @@ elseif game.PlaceId == 142823291 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/mm2.txt'),true))()
     end)
+elseif game.PlaceId == 537413528 then
+    main:AddLabel("Build A Boat For Treasure");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        https://raw.githubusercontent.com/VzltexArch/Scripts/master/BuildBoardForTreasure.txt
+end)
 elseif game.PlaceId == 662417684 then
     main:AddLabel("Lucky Blox Battle Ground");
     main:AddButton("Start", function()
