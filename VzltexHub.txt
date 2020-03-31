@@ -36,7 +36,13 @@ elseif game.PlaceId == 537413528 then
     main:AddButton("Start", function()
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/BuildBoardForTreasure.txt'),true))()
-end)
+    end)
+elseif game.PlaceId == 621129760 then
+    main:AddLabel("KAT");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Kat.txt'),true))()
+    end)
 elseif game.PlaceId == 662417684 then
     main:AddLabel("Lucky Blox Battle Ground");
     main:AddButton("Start", function()
