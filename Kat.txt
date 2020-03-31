@@ -6,7 +6,7 @@ local visual = library:CreateWindow({text = "Visual"})
 local credits = library:CreateWindow({text='Credits'})
 credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub")
 
-main:AddButton("Aimbot", function()
+main:AddButton("Aimbot Key E", function()
     PLAYER  = game.Players.LocalPlayer
     MOUSE   = PLAYER:GetMouse()
     CC      = game.Workspace.CurrentCamera
