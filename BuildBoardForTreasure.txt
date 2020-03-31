@@ -1,0 +1,96 @@
+--Arsenal Wally Hub
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
+local main = library:CreateWindow({text = "Vzltex Hub"})
+local morph = library:CreateWindow({text = "Morph"})
+local visual = library:CreateWindow({text = "Visual"})
+local credits = library:CreateWindow({text='Credits'})
+credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub")
+
+main:AddButton("Gold Farm", function()
+    for i=1,5 do
+        local x = 50
+        local y = 50
+        local waittime = 0.09
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,1360)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,1606)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,2110)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,2356)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,2860)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,3610)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,3856)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,4360)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,4606)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,5111)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,5356)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,5860)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,6106)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,6610)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,6857)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,7360)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,7606)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,8110)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,8356)
+        wait(waittime)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60,-250,9523)
+        wait(waittime*7)
+        end
+end)
+
+main:AddButton("Speed Bypass", function()
+    while true do
+        wait()
+        local char = game.Players.LocalPlayer.Character
+        if char:FindFirstChild("Humanoid") ~= nil then
+            char.Humanoid.WalkSpeed = 100
+        else
+            print("Error Bypass")
+        end
+    end
+end)
+
+main:AddButton("JumpPower Bypass", function()
+    while true do
+        wait()
+        local char = game.Players.LocalPlayer.Character
+        if char:FindFirstChild("Humanoid") ~= nil then
+            char.Humanoid.JumpPower = 200
+        else
+            print("Error Bypass")
+        end
+    end
+end)
+
+morph:AddButton("Morph Fox", function()
+    local A_1 = "FoxCharacter"
+ local Event = game:GetService("Workspace").ChangeCharacter
+ Event:FireServer(A_1)
+end)
+
+morph:AddButton("Morph Chicken", function()
+    local A_1 = "ChickenCharacter"
+ local Event = game:GetService("Workspace").ChangeCharacter
+ Event:FireServer(A_1)
+end)
+
+visual:AddButton("Player ESP", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Scripts/master/ESP.txt", true))()
+end)
