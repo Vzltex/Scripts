@@ -1,0 +1,81 @@
+--Arsenal Wally Hub
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
+local main = library:CreateWindow({text = "Vzltex Hub"})
+local visual = library:CreateWindow({text = "Visual"})
+local credits = library:CreateWindow({text='Credits'})
+credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub")
+
+main:AddButton("Murder Teleport", function()
+    for a,b in pairs(game:GetService("Players"):GetPlayers()) do
+        for c,d in pairs(b.Backpack:GetDescendants()) do
+        if d.Name == "Knife" then
+        game:GetService("Players").LocalPlayer.Character:MoveTo(b.Character.HumanoidRootPart.Position+Vector3.new(0,0,2))
+        end
+        end
+        for e,f in pairs(b.Character:GetDescendants()) do
+        if f.Name == "Knife" then
+        game:GetService("Players").LocalPlayer.Character:MoveTo(b.Character.HumanoidRootPart.Position+Vector3.new(0,0,2))
+        end
+        end
+        end
+end)
+
+main:AddButton("Sheriff Teleport", function()
+    for a,b in pairs(game:GetService("Players"):GetPlayers()) do
+        for c,d in pairs(b.Backpack:GetDescendants()) do
+        if d.Name == "Revolver" then
+        game:GetService("Players").LocalPlayer.Character:MoveTo(b.Character.HumanoidRootPart.Position)
+        end
+        end
+        for e,f in pairs(b.Character:GetDescendants()) do
+        if f.Name == "Revolver" then
+        game:GetService("Players").LocalPlayer.Character:MoveTo(b.Character.HumanoidRootPart.Position)
+        end
+        end
+        end
+end)
+
+main:AddButton("Redeem All Codes", function()
+    for a,b in pairs(game:GetService("ReplicatedStorage").Codes:GetChildren()) do
+        game:GetService("ReplicatedStorage").Interactions.Server.RedeemCode:InvokeServer(b.Name)
+        end
+end)
+
+main:AddButton("Coin Teleport", function()
+    for a,b in pairs(workspace:GetChildren()) do
+        if b.Name == "Coin" then
+        b.Position = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position
+        end
+        end
+end)
+
+main:AddButton("Revoler Teleport", function()
+    Main:CreateButton("Goto",function()
+        game:GetService("Players").LocalPlayer.Character:MoveTo(game:GetService("Workspace").RevolverPickUp.Revolver.Position)
+    end)
+end)
+
+main:AddButton("NoClip Key E", function()
+    noclip = false
+    game:GetService('RunService').Stepped:connect(function()
+    if noclip then
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+    end
+    end)
+    plr = game.Players.LocalPlayer
+    mouse = plr:GetMouse()
+    mouse.KeyDown:connect(function(key)
+    
+    if key == "e" then
+    noclip = not noclip
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+    end
+    end)
+end)
+
+
+visual:AddButton("Player ESP", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Scripts/master/ESP.txt", true))()
+end)
+
