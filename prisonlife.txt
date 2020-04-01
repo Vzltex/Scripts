@@ -188,7 +188,7 @@ abuse:AddButton("Kill All", function()
 end)
 
 visual:AddButton("ESP", function()
-  spawn(loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true)))()
+  spawn(loadstring(game:HttpGet("https://raw.githubusercontent.com/VzltexArch/Scripts/master/ESP.txt", true)))()
 end)
 
 map:AddButton("Yard", function()
