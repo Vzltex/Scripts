@@ -67,6 +67,12 @@ elseif game.PlaceId == 4317347865 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/mm3.txt'),true))()
     end)
+elseif game.PlaceId == 1320186298 then
+    main:AddLabel("Island Royale");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/IslandRoyale.txt'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
