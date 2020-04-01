@@ -8,7 +8,7 @@ ESP_ENABLED  = false
 _G.FREE_FOR_ALL = true
 
 _G.BIND        = 101
-_G.ESP_BIND    = 52
+_G.ESP_BIND    = SHIT
 _G.CHANGE_AIM  = 'q'
 
 _G.AIM_AT = 'Head'
@@ -212,4 +212,4 @@ until ESP_ENABLED == false
 wait()
 _G.FREE_FOR_ALL = true
 _G.BIND = 101 -- LEFT CTRL
-_G.ESP_BIND = 52 -- LEFT ALT
+_G.ESP_BIND = SHIT -- LEFT ALT
