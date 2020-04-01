@@ -67,7 +67,25 @@ elseif game.PlaceId == 4317347865 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/mm3.txt'),true))()
     end)
-elseif game.PlaceId == 1320186298 then
+elseif game.PlaceId == 1320174999 then
+    main:AddLabel("Island Royale");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/IslandRoyale.txt'),true))()
+    end)
+elseif game.PlaceId == 3678591308 then
+    main:AddLabel("Island Royale");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/IslandRoyale.txt'),true))()
+    end)
+elseif game.PlaceId == 3210442546 then
+    main:AddLabel("Island Royale");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/IslandRoyale.txt'),true))()
+    end)
+elseif game.PlaceId == 3213501585 then
     main:AddLabel("Island Royale");
     main:AddButton("Start", function()
         game.CoreGui['UILibrary']:Destroy()
