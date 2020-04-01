@@ -119,7 +119,7 @@ elseif game.PlaceId == 3362132792 then
     main:AddLabel("Empty Baseplate [Server Side]");
     main:AddButton("Start", function()
         game.CoreGui['UILibrary']:Destroy()
-        
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/SS.txt'),true))()
     end)
 else
     main:AddLabel("Universal No Game Detected");
