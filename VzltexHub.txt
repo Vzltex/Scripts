@@ -61,6 +61,12 @@ elseif game.PlaceId == 4623386862 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Piggy.txt'),true))()
     end)
+elseif game.PlaceId == 4317347865 then
+    main:AddLabel("Murder Mystery 3");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/mm3.txt'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
