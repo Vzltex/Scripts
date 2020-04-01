@@ -119,12 +119,6 @@ elseif game.PlaceId == 3362132792 then
     main:AddLabel("Empty Baseplate [Server Side]");
     main:AddButton("Start", function()
         game.CoreGui['UILibrary']:Destroy()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Qclash.txt'),true))()
-    end)
-else
-    main:AddLabel("Universal No Game Detected");
-    main:AddButton("Start", function()
-        game.CoreGui['UILibrary']:Destroy()
         local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
     local ssgui = library:CreateWindow({text = "Vzltex Hub SS"})
     local remotevent = game:GetService("ReplicatedStorage").RemoteEvent
@@ -137,6 +131,12 @@ else
         game.CoreGui['UILibrary']:Destroy()
     end)
     end)
+    end)
+else
+    main:AddLabel("Universal No Game Detected");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Universal.txt'),true))()
 end
 
 ss:AddButton("Start (RemoteEvent)", function()
