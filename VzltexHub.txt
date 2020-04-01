@@ -103,6 +103,12 @@ elseif game.PlaceId == 12996397 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/ClimbTime.txt'),true))()
     end)
+elseif game.PlaceId == 625364452 then
+    main:AddLabel("Climb Time");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Nerffps.txt'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
