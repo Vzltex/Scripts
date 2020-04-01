@@ -104,7 +104,7 @@ elseif game.PlaceId == 12996397 then
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/ClimbTime.txt'),true))()
     end)
 elseif game.PlaceId == 625364452 then
-    main:AddLabel("Climb Time");
+    main:AddLabel("Nerf FPS");
     main:AddButton("Start", function()
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Nerffps.txt'),true))()
