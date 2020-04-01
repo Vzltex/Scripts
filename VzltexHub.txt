@@ -109,6 +109,12 @@ elseif game.PlaceId == 625364452 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Nerffps.txt'),true))()
     end)
+elseif game.PlaceId == 2029250188 then
+    main:AddLabel("Q-CLASH");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Qclash.txt'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
