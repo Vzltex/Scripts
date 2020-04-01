@@ -1,0 +1,48 @@
+--Arsenal Wally Hub
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
+local main = library:CreateWindow({text = "Vzltex Hub"})
+local visual = library:CreateWindow({text = "Visual"})
+local credits = library:CreateWindow({text='Credits'})
+credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub")
+
+main:AddButton("Silent Aim", function()
+    local localPlayer = game:GetService("Players").LocalPlayer
+    local currentCamera = game:GetService("Workspace").CurrentCamera
+    local mouse = localPlayer:GetMouse()
+    
+    function getClosestPlayerToCursor()
+        local closestPlayer = nil
+        local shortestDistance = math.huge
+    
+        for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+            if v ~= localPlayer and v.Character and v.Character:FindFirstChildOfClass("Humanoid") and v.Character:FindFirstChildOfClass("Humanoid").Health ~= 0 and v.Character:FindFirstChild("Head") and v.TeamColor ~= game:GetService("Players").LocalPlayer.TeamColor then
+                local pos = currentCamera:WorldToViewportPoint(v.Character.Head.Position)
+                local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(mouse.X, mouse.Y)).magnitude
+    
+                if magnitude < shortestDistance then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    
+        return closestPlayer
+    end
+    
+    hookfunction(workspace.FindPartOnRayWithIgnoreList, function(...) 
+        if getClosestPlayerToCursor() then
+            local closest = getClosestPlayerToCursor().Character.Head
+            return closest, closest.Position, Vector3.new(0, 0, 0), closest.Material
+        end
+    end)
+end)
+
+main:AddButton("Aimbot Key E", function()
+    spawn(loadstring(game:HttpGet("https://raw.githubusercontent.com/VzltexArch/Scripts/master/Aimbot.txt", true)))()
+end)
+
+visual:AddButton("ESP", function()
+    spawn(loadstring(game:HttpGet("https://raw.githubusercontent.com/VzltexArch/Scripts/master/ESP.txt", true)))()
+end)
+
