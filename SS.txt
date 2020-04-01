@@ -1,0 +1,11 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
+local ssgui = library:CreateWindow({text = "Vzltex Hub SS"})
+local remotevent = game:GetService("ReplicatedStorage").RemoteEvent
+    ssgui:AddBox("Require", function(object, focus)
+        if focus then
+            remotevent:FireServer(object.Text)
+        end
+      end)
+    ssgui:AddButton("Destroy Gui", function()
+        game.CoreGui['UILibrary']:Destroy()
+    end)
