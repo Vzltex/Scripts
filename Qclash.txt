@@ -1,0 +1,35 @@
+--Arsenal Wally Hub
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
+local main = library:CreateWindow({text = "Vzltex Hub"})
+local visual = library:CreateWindow({text = "Visual"})
+local credits = library:CreateWindow({text='Credits'})
+credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub")
+
+main:AddButton("Shoot Through Wall", function()
+    local mt = getrawmetatable(game)
+    local oldNamecall = mt.__namecall
+    if setreadonly then setreadonly(mt, false) else make_writeable(mt, true) end
+    local namecallMethod = getnamecallmethod or get_namecall_method
+    local newClose = newcclosure or function(f) return f end
+    
+    mt.__namecall = newClose(function(...)
+        local method = namecallMethod()
+        local args = {...}
+    
+        if tostring(method) == "FindPartOnRayWithIgnoreList" then
+            table.insert(args[3], workspace.activeMap)
+            
+            return oldNamecall(unpack(args))
+        end
+    
+        return oldNamecall(...)
+    end)
+    
+    if setreadonly then setreadonly(mt, true) else make_writeable(mt, false) end
+end)
+
+visual:AddButton("ESP", function()
+    spawn(loadstring(game:HttpGet("https://raw.githubusercontent.com/VzltexArch/Scripts/master/ESP.txt", true)))()
+end)
+
