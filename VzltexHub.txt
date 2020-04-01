@@ -91,6 +91,12 @@ elseif game.PlaceId == 3213501585 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/IslandRoyale.txt'),true))()
     end)
+elseif game.PlaceId == 12996397 then
+    main:AddLabel("Mega Fun Obby");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/MegaFunObby.txt'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
