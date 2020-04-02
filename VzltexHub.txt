@@ -122,6 +122,12 @@ elseif game.PlaceId == 3362132792 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/SS.txt'),true))()
     end)
+elseif game.PlaceId == 318978013 then
+    main:AddLabel("Kick Off");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/kickoff.lua'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
