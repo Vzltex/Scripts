@@ -75,7 +75,80 @@ main:AddButton("NoClip Key E", function()
 end)
 
 
-visual:AddButton("Player ESP", function()
+visual:AddButton("ESP", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Scripts/master/ESP.txt", true))()
+end)
+
+visual:AddButton("Murder And Sheriff ESP", function()
+    playas = game.Players:GetDescendants()
+    local murderer = nil
+    local sheriff = nil
+    
+    for i,v in ipairs(playas) do
+    if v:IsA("Player") then
+    find = v.Character:FindFirstChild("Knife")
+    find2 = v.Character:FindFirstChild("Gun")
+    
+    if find then
+    murderer = v.Name
+    end
+    
+    if find2 then
+    sheriff = v.Name
+    end
+    end
+    
+    if v.Name == "Knife" then
+    murderer = v.Parent.Parent.Name 
+    end
+    
+    if v.Name == "Revolver" then
+    sheriff = v.Parent.Parent.Name 
+    end
+    
+    end
+    
+    if murderer then
+    
+    print("Murderer: " .. murderer)
+    
+    local tag = Instance.new("BillboardGui")
+    tag.Parent = game.Players[murderer].Character.Head
+    tag.Adornee = game.Players[murderer].Character.Head
+    tag.StudsOffset = Vector3.new(0,3,0)
+    tag.Size = UDim2.new(0,150,0,50)
+    tag.AlwaysOnTop = true
+    
+    local title = Instance.new("TextLabel")
+    title.Parent = tag
+    title.Text = "Murderer"
+    title.Size = UDim2.new(0,150,0,50)
+    title.BackgroundColor3 = Color3.new(163,0,0)
+    title.TextColor3 = Color3.new(255,255,255)
+    title.TextScaled = true
+    
+    end
+    
+    if sheriff then
+    
+    print("Sheriff: " .. sheriff)
+    local tag = Instance.new("BillboardGui")
+    tag.Parent = game.Players[sheriff].Character.Head
+    tag.Adornee = game.Players[sheriff].Character.Head
+    tag.StudsOffset = Vector3.new(0,3,0)
+    tag.Size = UDim2.new(0,150,0,50)
+    tag.AlwaysOnTop = true
+    
+    local title = Instance.new("TextLabel")
+    title.Parent = tag
+    title.Text = "Sheriff"
+    title.Size = UDim2.new(0,150,0,50)
+    title.BackgroundColor3 = Color3.new(0,0,163)
+    title.TextColor3 = Color3.new(255,255,255)
+    title.TextScaled = true
+    
+    else
+    print("Sheriff gun is dropped")
+end
 end)
 
