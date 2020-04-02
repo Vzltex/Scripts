@@ -1,11 +1,337 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
-local ssgui = library:CreateWindow({text = "Vzltex Hub SS"})
-local remotevent = game:GetService("ReplicatedStorage").RemoteEvent
-    ssgui:AddBox("Require", function(object, focus)
-        if focus then
-            remotevent:FireServer(object.Text)
-        end
-      end)
-    ssgui:AddButton("Destroy Gui", function()
-        game.CoreGui['UILibrary']:Destroy()
-    end)
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local InsertedObjects = Instance.new("ScreenGui")
+local Gradient = Instance.new("ImageLabel")
+local Execute = Instance.new("ImageButton")
+local TextLabel = Instance.new("TextLabel")
+local Clear = Instance.new("ImageButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local ExecutingBox = Instance.new("TextBox")
+local Gradient_2 = Instance.new("ImageLabel")
+local CloseSH = Instance.new("TextButton")
+local IY = Instance.new("ImageButton")
+local InfinitieYield = Instance.new("TextLabel")
+local TrapRifle = Instance.new("ImageButton")
+local Text = Instance.new("TextLabel")
+local voodoo = Instance.new("ImageButton")
+local Text_2 = Instance.new("TextLabel")
+local Owo = Instance.new("ImageButton")
+local Text_3 = Instance.new("TextLabel")
+local WiredoNeko = Instance.new("ImageButton")
+local Text_4 = Instance.new("TextLabel")
+local Jester = Instance.new("ImageButton")
+local Text_5 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local plr = game.Players
+
+--Properties:
+
+InsertedObjects.Name = "InsertedObjects"
+InsertedObjects.Parent = game.CoreGui
+
+Gradient.Name = "Gradient"
+Gradient.Parent = InsertedObjects
+Gradient.Active = true
+Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gradient.BackgroundTransparency = 1.000
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(0.008599489, 0, 0.0500595793, 0)
+Gradient.Selectable = true
+Gradient.Size = UDim2.new(0, 526, 0, 285)
+Gradient.Image = "http://www.roblox.com/asset/?id=4499757638"
+Gradient.Draggable = true
+
+Execute.Name = "Execute"
+Execute.Parent = Gradient
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BackgroundTransparency = 1.000
+Execute.Position = UDim2.new(0.0264156442, 0, 0.845542908, 0)
+Execute.Size = UDim2.new(0, 236, 0, 31)
+Execute.Image = "rbxassetid://2790382281"
+Execute.ImageColor3 = Color3.fromRGB(170, 0, 255)
+Execute.ScaleType = Enum.ScaleType.Slice
+Execute.SliceCenter = Rect.new(4, 4, 252, 252)
+Execute.MouseButton1Click:connect(function()
+  game:GetService("ReplicatedStorage").RemoteEvent:FireServer(ExecutingBox.Text)
+end)
+
+TextLabel.Parent = Execute
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.502809525, 0, 0.485080838, 0)
+TextLabel.Size = UDim2.new(1.03191483, -5, 1.13145137, -5)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "Execute"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+Clear.Name = "Clear"
+Clear.Parent = Gradient
+Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clear.BackgroundTransparency = 1.000
+Clear.Position = UDim2.new(0.527990222, 0, 0.845542908, 0)
+Clear.Size = UDim2.new(0, 236, 0, 31)
+Clear.Image = "rbxassetid://2790382281"
+Clear.ImageColor3 = Color3.fromRGB(170, 0, 255)
+Clear.ScaleType = Enum.ScaleType.Slice
+Clear.SliceCenter = Rect.new(4, 4, 252, 252)
+Clear.MouseButton1Click:connect(function()
+ExecutingBox.Text = ""
+end)
+
+TextLabel_2.Parent = Clear
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.494334936, 0, 0.485080838, 0)
+TextLabel_2.Size = UDim2.new(1.03191483, -5, 1.13145137, -5)
+TextLabel_2.Font = Enum.Font.GothamSemibold
+TextLabel_2.Text = "Clear"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+
+TextLabel_3.Parent = Gradient
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.077034533, 0, 0.0780633241, 0)
+TextLabel_3.Size = UDim2.new(0.166895673, -5, 0.127942741, -5)
+TextLabel_3.Font = Enum.Font.GothamBold
+TextLabel_3.Text = "Vzltex"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 19.000
+
+TextLabel_4.Parent = Gradient
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.153999999, 0, 0.0599999987, 0)
+TextLabel_4.Size = UDim2.new(0.180000007, -5, 0.128000006, -5)
+TextLabel_4.Font = Enum.Font.GothamBold
+TextLabel_4.Text = "SS"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 19.000
+
+ExecutingBox.Name = "ExecutingBox"
+ExecutingBox.Parent = Gradient
+ExecutingBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExecutingBox.BackgroundTransparency = 0.900
+ExecutingBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ExecutingBox.Position = UDim2.new(0.0229024552, 0, 0.132220894, 0)
+ExecutingBox.Size = UDim2.new(0, 500, 0, 196)
+ExecutingBox.Font = Enum.Font.GothamSemibold
+ExecutingBox.Text = ""
+ExecutingBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecutingBox.TextSize = 17.000
+ExecutingBox.TextXAlignment = Enum.TextXAlignment.Left
+ExecutingBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Gradient_2.Name = "Gradient"
+Gradient_2.Parent = Gradient
+Gradient_2.Active = true
+Gradient_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gradient_2.BackgroundTransparency = 1.000
+Gradient_2.BorderSizePixel = 0
+Gradient_2.Position = UDim2.new(1.01783204, 0, -0.0013800906, 0)
+Gradient_2.Selectable = true
+Gradient_2.Size = UDim2.new(0, 210, 0, 285)
+Gradient_2.Image = "http://www.roblox.com/asset/?id=4499757638"
+Gradient_2.Visible = false
+
+CloseSH.Name = "CloseSH"
+CloseSH.Parent = Gradient_2
+CloseSH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseSH.BackgroundTransparency = 1.000
+CloseSH.Position = UDim2.new(0.852372169, 0, 0.0207975153, 0)
+CloseSH.Size = UDim2.new(0, 31, 0, 23)
+CloseSH.Font = Enum.Font.GothamSemibold
+CloseSH.Text = "X"
+CloseSH.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseSH.TextSize = 16.000
+CloseSH.MouseButton1Click:Connect(function()
+	Gradient_2.Visible = false
+end)
+
+IY.Name = "IY"
+IY.Parent = Gradient_2
+IY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IY.BackgroundTransparency = 1.000
+IY.Position = UDim2.new(0.0479460359, 0, 0.147297263, 0)
+IY.Size = UDim2.new(0, 189, 0, 31)
+IY.Image = "rbxassetid://2790382281"
+IY.ImageColor3 = Color3.fromRGB(170, 0, 255)
+IY.ScaleType = Enum.ScaleType.Slice
+IY.SliceCenter = Rect.new(4, 4, 252, 252)
+IY.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").RemoteEvent:FireServer(require((3023102224))('plr.Name'))
+end)
+
+InfinitieYield.Name = "Infinitie Yield"
+InfinitieYield.Parent = IY
+InfinitieYield.AnchorPoint = Vector2.new(0.5, 0.5)
+InfinitieYield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfinitieYield.BackgroundTransparency = 1.000
+InfinitieYield.BorderSizePixel = 0
+InfinitieYield.Position = UDim2.new(0.490371138, 0, 0.485080838, 0)
+InfinitieYield.Size = UDim2.new(1.02903616, -5, 1.13145137, -5)
+InfinitieYield.Font = Enum.Font.GothamSemibold
+InfinitieYield.Text = " Infinitie Yield SS"
+InfinitieYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfinitieYield.TextSize = 14.000
+
+TrapRifle.Name = "TrapRifle"
+TrapRifle.Parent = Gradient_2
+TrapRifle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TrapRifle.BackgroundTransparency = 1.000
+TrapRifle.Position = UDim2.new(0.0479460359, 0, 0.294665694, 0)
+TrapRifle.Size = UDim2.new(0, 189, 0, 31)
+TrapRifle.Image = "rbxassetid://2790382281"
+TrapRifle.ImageColor3 = Color3.fromRGB(170, 0, 255)
+TrapRifle.ScaleType = Enum.ScaleType.Slice
+TrapRifle.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Text.Name = "Text"
+Text.Parent = TrapRifle
+Text.AnchorPoint = Vector2.new(0.5, 0.5)
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.BorderSizePixel = 0
+Text.Position = UDim2.new(0.490371138, 0, 0.485080838, 0)
+Text.Size = UDim2.new(1.02903616, -5, 1.13145137, -5)
+Text.Font = Enum.Font.GothamSemibold
+Text.Text = "Trap Rifle"
+Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text.TextSize = 14.000
+
+voodoo.Name = "voodoo"
+voodoo.Parent = Gradient_2
+voodoo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+voodoo.BackgroundTransparency = 1.000
+voodoo.Position = UDim2.new(0.0479460359, 0, 0.438525349, 0)
+voodoo.Size = UDim2.new(0, 189, 0, 31)
+voodoo.Image = "rbxassetid://2790382281"
+voodoo.ImageColor3 = Color3.fromRGB(170, 0, 255)
+voodoo.ScaleType = Enum.ScaleType.Slice
+voodoo.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Text_2.Name = "Text"
+Text_2.Parent = voodoo
+Text_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.BackgroundTransparency = 1.000
+Text_2.BorderSizePixel = 0
+Text_2.Position = UDim2.new(0.490371138, 0, 0.485080838, 0)
+Text_2.Size = UDim2.new(1.02903616, -5, 1.13145137, -5)
+Text_2.Font = Enum.Font.GothamSemibold
+Text_2.Text = "Voodoo Child"
+Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_2.TextSize = 14.000
+
+Owo.Name = "Owo"
+Owo.Parent = Gradient_2
+Owo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Owo.BackgroundTransparency = 1.000
+Owo.Position = UDim2.new(0.0479460359, 0, 0.589402556, 0)
+Owo.Size = UDim2.new(0, 189, 0, 31)
+Owo.Image = "rbxassetid://2790382281"
+Owo.ImageColor3 = Color3.fromRGB(170, 0, 255)
+Owo.ScaleType = Enum.ScaleType.Slice
+Owo.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Text_3.Name = "Text"
+Text_3.Parent = Owo
+Text_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_3.BackgroundTransparency = 1.000
+Text_3.BorderSizePixel = 0
+Text_3.Position = UDim2.new(0.490371138, 0, 0.485080838, 0)
+Text_3.Size = UDim2.new(1.02903616, -5, 1.13145137, -5)
+Text_3.Font = Enum.Font.GothamSemibold
+Text_3.Text = "OwOHammer"
+Text_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_3.TextSize = 14.000
+
+WiredoNeko.Name = "WiredoNeko"
+WiredoNeko.Parent = Gradient_2
+WiredoNeko.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WiredoNeko.BackgroundTransparency = 1.000
+WiredoNeko.Position = UDim2.new(0.0479460359, 0, 0.726244628, 0)
+WiredoNeko.Size = UDim2.new(0, 189, 0, 31)
+WiredoNeko.Image = "rbxassetid://2790382281"
+WiredoNeko.ImageColor3 = Color3.fromRGB(170, 0, 255)
+WiredoNeko.ScaleType = Enum.ScaleType.Slice
+WiredoNeko.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Text_4.Name = "Text"
+Text_4.Parent = WiredoNeko
+Text_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Text_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_4.BackgroundTransparency = 1.000
+Text_4.BorderSizePixel = 0
+Text_4.Position = UDim2.new(0.490371138, 0, 0.485080838, 0)
+Text_4.Size = UDim2.new(1.02903616, -5, 1.13145137, -5)
+Text_4.Font = Enum.Font.GothamSemibold
+Text_4.Text = "Wired Neko"
+Text_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_4.TextSize = 14.000
+
+Jester.Name = "Jester"
+Jester.Parent = Gradient_2
+Jester.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Jester.BackgroundTransparency = 1.000
+Jester.Position = UDim2.new(0.0479460359, 0, 0.8630867, 0)
+Jester.Size = UDim2.new(0, 189, 0, 31)
+Jester.Image = "rbxassetid://2790382281"
+Jester.ImageColor3 = Color3.fromRGB(170, 0, 255)
+Jester.ScaleType = Enum.ScaleType.Slice
+Jester.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Text_5.Name = "Text"
+Text_5.Parent = Jester
+Text_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Text_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_5.BackgroundTransparency = 1.000
+Text_5.BorderSizePixel = 0
+Text_5.Position = UDim2.new(0.490371138, 0, 0.485080838, 0)
+Text_5.Size = UDim2.new(1.02903616, -5, 1.13145137, -5)
+Text_5.Font = Enum.Font.GothamSemibold
+Text_5.Text = "Jester"
+Text_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_5.TextSize = 14.000
+
+TextLabel_5.Parent = Gradient_2
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.270801932, 0, 0.0605194718, 0)
+TextLabel_5.Size = UDim2.new(0.49171114, -5, 0.127942741, -5)
+TextLabel_5.Font = Enum.Font.GothamBold
+TextLabel_5.Text = "Scripts Hub"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 19.000
+
+Close.Name = "Close"
+Close.Parent = Gradient
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.940784335, 0, 0.00325365574, 0)
+Close.Size = UDim2.new(0, 31, 0, 23)
+Close.Font = Enum.Font.GothamSemibold
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 16.000
+Close.MouseButton1Click:Connect(function()
+	Gradient.Visible = false
+end)
