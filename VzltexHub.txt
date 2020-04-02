@@ -4,6 +4,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vzlte
 local main = library:CreateWindow({text = "Vzltex Hub"})
 local ss = library:CreateWindow({text = "Server Sided / Back Door"})
 local festatus = library:CreateWindow({text = "Fe Check"})
+local rs = library:CreateWindow({text = "Remote Spy"})
 local credits = library:CreateWindow({text='Credits'})
 
 
@@ -155,4 +156,8 @@ credits:AddLabel("Credits\nInori: Dragging\nwally: UI\nVzltex : Script Hub\n")
 credits:AddButton("Destroy GUI", function()
     game.CoreGui['UILibrary']:Destroy()
     print"No Game"
+end)
+
+rs:AddButton("Remote Spy", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/Mrspy.lua'),true))()
 end)
