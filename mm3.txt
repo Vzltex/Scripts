@@ -87,7 +87,7 @@ visual:AddButton("Murder And Sheriff ESP", function()
     for i,v in ipairs(playas) do
     if v:IsA("Player") then
     find = v.Character:FindFirstChild("Knife")
-    find2 = v.Character:FindFirstChild("Gun")
+    find2 = v.Character:FindFirstChild("Revolver")
     
     if find then
     murderer = v.Name
