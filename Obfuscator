@@ -1,0 +1,204 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Obfuscator = Instance.new("ScreenGui")
+local Byte = Instance.new("Frame")
+local In = Instance.new("TextBox")
+local Obsfucate = Instance.new("TextButton")
+local Out = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local InButton = Instance.new("TextButton")
+local OutButton = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local Copy = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+
+--Properties:
+
+Obfuscator.Name = "Obfuscator"
+Obfuscator.Parent = game.CoreGui
+
+Byte.Name = "Byte"
+Byte.Parent = Obfuscator
+Byte.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Byte.Position = UDim2.new(0.147420183, 0, 0.174061432, 0)
+Byte.Size = UDim2.new(0, 1216, 0, 559)
+Byte.Active = true
+Byte.Draggable = true
+
+In.Name = "In"
+In.Parent = Byte
+In.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+In.BorderColor3 = Color3.fromRGB(27, 42, 53)
+In.Position = UDim2.new(0.0120000001, 0, 0.142000005, 0)
+In.Size = UDim2.new(0, 1176, 0, 442)
+In.Font = Enum.Font.SourceSans
+In.PlaceholderText = "-- Replace Script Here"
+In.Text = ""
+In.TextColor3 = Color3.fromRGB(178, 178, 178)
+In.TextSize = 16.000
+In.TextXAlignment = Enum.TextXAlignment.Left
+In.TextYAlignment = Enum.TextYAlignment.Top
+In.ClearTextOnFocus = false
+In.TextWrapped = true
+
+Obsfucate.Name = "Obsfucate"
+Obsfucate.Parent = Byte
+Obsfucate.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Obsfucate.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Obsfucate.Position = UDim2.new(0.0104815364, 0, 0.941110909, 0)
+Obsfucate.Size = UDim2.new(0, 186, 0, 26)
+Obsfucate.Font = Enum.Font.SourceSans
+Obsfucate.Text = "Obfuscate Scripts"
+Obsfucate.TextColor3 = Color3.fromRGB(255, 255, 255)
+Obsfucate.TextSize = 14.000
+Obsfucate.MouseButton1Click:Connect(function()
+local a = In.Text
+
+a="--// Decompiled Code. \n"..a;function Obfuscate2(b)local c="function IllIlllIllIlllIlllIlllIll(IllIlllIllIllIll) if (IllIlllIllIllIll==(((((919 + 636)-636)*3147)/3147)+919)) then return not true end if (IllIlllIllIllIll==(((((968 + 670)-670)*3315)/3315)+968)) then return not false end end; "local d=c;local e=""local f={"IllIllIllIllI","IIlllIIlllIIlllIIlllII","IIllllIIllll"}local g=[[local IlIlIlIlIlIlIlIlII = {]]local h=[[local IllIIllIIllIII = loadstring]]local i=[[local IllIIIllIIIIllI = table.concat]]local j=[[local IIIIIIIIllllllllIIIIIIII = "''"]]local k="local "..f[math.random(1,#f)].." = (7*3-9/9+3*2/0+3*3);"local l="local "..f[math.random(1,#f)].." = (3*4-7/7+6*4/3+9*9);"local m="--// Obfuscated with Byte Obfuscator v1.0 \n\n"for n=1,string.len(b)do e=e.."'\\"..string.byte(b,n).."',"end;local o="function IllIIIIllIIIIIl("..f[math.random(1,#f)]..")"local p="function "..f[math.random(1,#f)].."("..f[math.random(1,#f)]..")"local q="local "..f[math.random(1,#f)].." = (5*3-2/8+9*2/9+8*3)"local r="end"local s="IllIIIIllIIIIIl(900283)"local t="function IllIlllIllIlllIlllIlllIllIlllIIIlll("..f[math.random(1,#f)]..")"local q="function "..f[math.random(1,#f)].."("..f[math.random(1,#f)]..")"local u="local "..f[math.random(1,#f)].." = (9*0-7/5+3*1/3+8*2)"local v="end"local w="IllIlllIllIlllIlllIlllIllIlllIIIlll(9083)"local x=m..d..k..l..i..";"..o.." "..p.." "..q.." "..r.." "..r.." "..r..";"..s..";"..t.." "..q.." "..u.." "..v.." "..v..";"..w..";"..h..";"..g..e.."}".."IllIIllIIllIII(IllIIIllIIIIllI(IlIlIlIlIlIlIlIlII,IIIIIIIIllllllllIIIIIIII))()"Out.Text = (x)end;do Obfuscate2(a)end
+end)
+
+Out.Name = "Out"
+Out.Parent = Byte
+Out.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Out.Position = UDim2.new(0.0120000001, 0, 0.142000005, 0)
+Out.Selectable = false
+Out.Size = UDim2.new(0, 1175, 0, 441)
+Out.Visible = false
+Out.ClearTextOnFocus = false
+Out.Font = Enum.Font.SourceSans
+Out.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+Out.PlaceholderText = "-- Please Paste In Input To Obfuscate Script"
+Out.Text = ""
+Out.TextColor3 = Color3.fromRGB(178, 178, 178)
+Out.TextSize = 16.000
+Out.TextWrapped = true
+Out.TextXAlignment = Enum.TextXAlignment.Left
+Out.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel.Parent = Byte
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.00493421033, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 372, 0, 36)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Byte Obfuscator 2.0 by Byte#9999"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+InButton.Name = "InButton"
+InButton.Parent = Byte
+InButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+InButton.Position = UDim2.new(0.0113038514, 0, 0.0895903036, 0)
+InButton.Size = UDim2.new(0, 95, 0, 26)
+InButton.Font = Enum.Font.SourceSans
+InButton.Text = "Input"
+InButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+InButton.TextSize = 14.000
+InButton.MouseButton1Click:Connect(function()
+	In.Visible = true
+	Out.Visible = false
+end)
+
+OutButton.Name = "OutButton"
+OutButton.Parent = Byte
+OutButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+OutButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+OutButton.Position = UDim2.new(0.0894288495, 0, 0.0895902887, 0)
+OutButton.Size = UDim2.new(0, 104, 0, 26)
+OutButton.Font = Enum.Font.SourceSans
+OutButton.Text = "Output"
+OutButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+OutButton.TextSize = 14.000
+OutButton.MouseButton1Click:Connect(function()
+	In.Visible = false
+	Out.Visible = true
+end)
+
+Close.Name = "Close"
+Close.Parent = Byte
+Close.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Close.Position = UDim2.new(0.973474979, 0, -0.00164401846, 0)
+Close.Size = UDim2.new(0, 32, 0, 26)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Click:Connect(function()
+	Byte.Visible = false
+end)
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Byte
+Minimize.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Minimize.BackgroundTransparency = 1.000
+Minimize.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Minimize.Position = UDim2.new(0.947159171, 0, -0.00164401846, 0)
+Minimize.Size = UDim2.new(0, 32, 0, 26)
+Minimize.Font = Enum.Font.SourceSans
+Minimize.Text = "><"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+Minimize.MouseButton1Click:Connect(function()
+	if Minimize.Text == "><" then
+		 Minimize.Text = "<>"
+	     Byte.Size = UDim2.new(0, 1216, 0, 34)
+	     In.Visible = false
+	     Out.Visible = false
+	     Clear.Visible = false
+	     InButton.Visible = false
+	     OutButton.Visible = false
+	     Copy.Visible = false
+	     Obsfucate.Visible = false
+	else
+		Minimize.Text = "><"
+		 Byte.Size = UDim2.new(0, 1216, 0, 559)
+		 In.Visible = true
+	     Out.Visible = true
+	     Clear.Visible = true
+	     InButton.Visible = true
+	     OutButton.Visible = true
+	     Copy.Visible = true
+	     Obsfucate.Visible = true
+	end
+end)
+
+Copy.Name = "Copy"
+Copy.Parent = Byte
+Copy.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Copy.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Copy.Position = UDim2.new(0.169198617, 0, 0.941110909, 0)
+Copy.Size = UDim2.new(0, 59, 0, 26)
+Copy.Font = Enum.Font.SourceSans
+Copy.Text = "Copy"
+Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Copy.TextSize = 14.000
+Copy.MouseButton1Click:Connect(function()
+	
+end)
+
+Clear.Name = "Clear"
+Clear.Parent = Byte
+Clear.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Clear.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Clear.Position = UDim2.new(0.22511968, 0, 0.941110909, 0)
+Clear.Size = UDim2.new(0, 59, 0, 26)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextSize = 14.000
+Clear.MouseButton1Click:Connect(function()
+	In.Text = ""
+	Out.Text = ""
+end)
