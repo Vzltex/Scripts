@@ -134,6 +134,12 @@ elseif game.PlaceId == 4601704679 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/bakon.txt'),true))()
     end)
+elseif game.PlaceId == 606849621 then
+    main:AddLabel("Jailbreak");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/jailbreak.txt'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
