@@ -1,7 +1,7 @@
 --Arsenal Wally Hub
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/themessx/Wally-UI-Vztlx-Edition/master/VzltexArchUI.txt", true))()
-local main = library:CreateWindow({text = "Vzltex Hub"})
+local main = library:CreateWindow({text = "Byte Hub"})
 local morph = library:CreateWindow({text = "Morph"})
 local visual = library:CreateWindow({text = "Visual"})
 local credits = library:CreateWindow({text='Credits'})
