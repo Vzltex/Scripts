@@ -128,6 +128,12 @@ elseif game.PlaceId == 318978013 then
         game.CoreGui['UILibrary']:Destroy()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/kickoff.lua'),true))()
     end)
+elseif game.PlaceId == 4601704679 then
+    main:AddLabel("Bakon");
+    main:AddButton("Start", function()
+        game.CoreGui['UILibrary']:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/VzltexArch/Scripts/master/bakon.lua'),true))()
+    end)
 else
     main:AddLabel("Universal No Game Detected");
     main:AddButton("Start", function()
